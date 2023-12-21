@@ -1,5 +1,12 @@
-const removeFromArray = function() {
+const removeFromArray = function (array, ...itemToRemove) {
 
+    for (let i = 0; i < itemToRemove.length; i++) {
+        if (array.includes(itemToRemove[i])) {
+            array.splice(array.indexOf(itemToRemove[i]), 1);
+        }
+    }
+
+    return array;
 };
 
 // Do not edit below this line
